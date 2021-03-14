@@ -15,7 +15,7 @@ namespace BotonEventos {
     class Lienzo : Form {
         readonly BotonMov btn;
         public Lienzo() {
-            btn = new BotonMov(this) {
+            this.btn = new BotonMov(this) {
                 BackColor = Color.Brown,
                 ForeColor = Color.White,
                 Text = "Me\nmuevo",
@@ -24,7 +24,7 @@ namespace BotonEventos {
                 Location = new Point(25,250)
             };
             this.btn.Height = this.btn.Width;
-            Controls.Add(this.btn);
+            this.Controls.Add(this.btn);
             this.btn.mover();
         }
     }

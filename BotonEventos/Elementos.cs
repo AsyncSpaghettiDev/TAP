@@ -8,21 +8,24 @@ namespace BotonEventos {
     class BotonMov : Button {
         private int velocidadx;
         private int velocidady;
-        readonly private List<Control> caritas = new List<Control>(3);
         readonly private List<Control> nombres = new List<Control>();
+        readonly private List<Control> botones = new List<Control>(5);
+        readonly private List<Control> caritas = new List<Control>(3);
         public Form Lienzo {
             get; set;
         }
-        public BotonMov(Form Lienzo, int vx = 4, int vy = 4) {
+        public BotonMov( Form Lienzo, int vx = 4, int vy = 4 ) {
             this.Lienzo = Lienzo;
             this.velocidadx = vx;
             this.velocidady = vy;
         }
-        public async void mover() {
+        public async void mover( ) {
             while (true) {
                 // Rebote derecha
-                if (this.Location.X > this.Lienzo.Width - 10 - this.Width)
+                if (this.Location.X > this.Lienzo.Width - 10 - this.Width) {
                     this.velocidadx = -4;
+                    pintarBotones();
+                }
                 // Rebote izq
                 else if (this.Location.X < 5) {
                     this.velocidadx = 4;
@@ -33,40 +36,40 @@ namespace BotonEventos {
                     pintarCaritas();
                 }
                 // Rebote parte inferior
-                else if (this.Location.Y > Lienzo.Height - 35 -this.Height) {
+                else if (this.Location.Y > this.Lienzo.Height - 35 - this.Height) {
                     this.velocidady = -4;
                     pintarNombres();
                 }
                 // Toca equina superior derecha
-                if (this.Location.Y < 10 && this.Location.X > Lienzo.Width - 30 - this.Width) {
-                    quitarCosas(caritas, Color.Yellow);
+                if (this.Location.Y < 10 && this.Location.X > this.Lienzo.Width - 30 - this.Width) {
+                    quitarCosas(this.caritas, Color.Yellow);
                 }
                 // Toca esquina inferior derecha
-                if (this.Location.Y > Lienzo.Height - 90 - this.Height && this.Location.X > Lienzo.Width - 20 - this.Width) {
+                if (this.Location.Y > this.Lienzo.Height - 90 - this.Height && this.Location.X > this.Lienzo.Width - 20 - this.Width) {
                     quitarCosas(this.nombres, Color.Blue);
                 }
                 // Movimiento
                 this.Left += this.velocidadx;
                 this.Top += this.velocidady;
-                Lienzo.Text = this.Location.ToString() + Lienzo.Size;
+                this.Lienzo.Text = this.Location.ToString() + this.Lienzo.Size;
 
                 await Task.Delay(20);
             }
         }
-        private void quitarCosas(List<Control> lista, Color fondo) {
+        private void quitarCosas( List<Control> lista, Color fondo ) {
             for (int i = 0; i < lista.Count; i++)
                 this.Lienzo.Controls.Remove(lista[ i ]);
             lista.Clear();
-            Lienzo.BackColor = fondo;
+            this.Lienzo.BackColor = fondo;
         }
-        private void pintarCaritas() {
+        private void pintarCaritas( ) {
             quitarCosas(this.caritas, Color.Yellow);
             for (int i = 0; i < 3; i++) {
-                caritas.Add(new Carita(Lienzo, i).ElemMovible);
-                this.Lienzo.Controls.Add(caritas[ i ]);
+                this.caritas.Add(new Carita(this.Lienzo, i).ElemMovible);
+                this.Lienzo.Controls.Add(this.caritas[ i ]);
             }
         }
-        private void pintarNombres() {
+        private void pintarNombres( ) {
             quitarCosas(this.nombres, Color.Blue);
             // 150 H & 20 W
             int maxW = this.Lienzo.Width / 150, maxH = ( this.Lienzo.Height - 40 ) / 20;
@@ -80,34 +83,38 @@ namespace BotonEventos {
                     this.Lienzo.Controls.Add(this.nombres[ this.nombres.Count - 1 ]);
                 }
         }
+        private void pintarBotones( ) {
+            quitarCosas(this.botones, Color.Orange);
+            for (int i = 0; i < 5; i++) {
+                this.botones.Add(new BotonSenc(this.Lienzo, i).ElemMovible);
+                this.Lienzo.Controls.Add(this.botones[ i ]);
+            }
+        }
     }
     class ElemMov {
         protected int velocidadx;
         protected int velocidady;
-
         protected readonly int[,] vel = new int[,] { { -5, 6 }, { -6, -4 }, { 4, -5 } };
         protected readonly int[,] pos = new int[,] { { 25, 30 }, { 100, 31 }, { 52, 120 } };
         public Form Lienzo {
             get; private set;
         }
-        protected Control ElemMovible {
-            get; private set;
+        public Control ElemMovible {
+            get; protected set;
         }
-        public ElemMov(Form Lienzo, int indice) {
+        public ElemMov( Form Lienzo, int indice ) {
             this.ElemMovible = new Control();
             this.Lienzo = Lienzo;
-            this.velocidadx = vel[ indice, 0 ];
-            this.velocidady = vel[ indice, 1 ];
         }
-        public async void mover(Control mov) {
+        public async void mover( Control mov ) {
             while (true) {
-                if (mov.Right > Lienzo.Width - 15)
+                if (mov.Right > this.Lienzo.Width - 15)
                     this.velocidadx = -4;
                 else if (mov.Left < 0)
                     this.velocidadx = 4;
                 else if (mov.Top < 0)
                     this.velocidady = 4;
-                else if (mov.Bottom > Lienzo.Height - 35)
+                else if (mov.Bottom > this.Lienzo.Height - 35)
                     this.velocidady = -4;
 
                 mov.Left += this.velocidadx;
@@ -121,23 +128,29 @@ namespace BotonEventos {
         public new PictureBox ElemMovible {
             get; private set;
         }
-        public Carita(Form Lienzo, int indice): base(Lienzo, indice) {
+        public Carita( Form Lienzo, int indice ) : base(Lienzo, indice) {
             this.ElemMovible = new PictureBox() {
                 SizeMode = PictureBoxSizeMode.Zoom,
-                Size = new Size(50,50)
+                Size = new Size(50, 50)
             };
             this.ElemMovible.Load("https://images.emojiterra.com/google/android-11/512px/1f60a.png");
             this.ElemMovible.Location = new Point(this.pos[ indice, 0 ], this.pos[ indice, 1 ]);
+            this.velocidadx = this.vel[ indice, 0 ];
+            this.velocidady = this.vel[ indice, 1 ];
             mover(this.ElemMovible);
         }
     }
     class BotonSenc : ElemMov {
-        protected new Button ElemMovible {
-            get; private set;
-        }
-        public BotonSenc(Form Lienzo, int indice) : base(Lienzo, indice) {
+        private new readonly int[,] vel = new int[,] { { -5, 6 }, { -6, -4 }, { 4, -5 }, { 2, 6 }, { -7, 6 } };
+        private new readonly int[,] pos = new int[,] { { 25, 30 }, { 100, 31 }, { 52, 120 }, { 125, 100 }, { 200, 350 } };
+        private readonly int[,] colores = new int[,] { { 128, 0, 0 }, { 128, 128, 128 }, { 0, 0, 128 }, { 128, 0, 128 }, { 128, 128, 0 } };
+        public BotonSenc( Form Lienzo, int indice ) : base(Lienzo, indice) {
             this.ElemMovible = new Button();
             this.ElemMovible.Location = new Point(this.pos[ indice, 0 ], this.pos[ indice, 1 ]);
+            this.velocidadx = this.vel[ indice, 0 ];
+            this.velocidady = this.vel[ indice, 1 ];
+            this.ElemMovible.BackColor = Color.FromArgb(this.colores[ indice, 0 ], this.colores[ indice, 1 ], this.colores[ indice, 2 ]);
+            mover(this.ElemMovible);
         }
     }
 }
