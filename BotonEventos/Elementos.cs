@@ -18,6 +18,13 @@ namespace BotonEventos {
             this.Lienzo = Lienzo;
             this.velocidadx = vx;
             this.velocidady = vy;
+            this.BackColor = Color.Brown;
+            this.ForeColor = Color.White;
+            this.Text = "Me\nmuevo";
+            this.Font = new Font(familyName: "Comic Sans MS",12);
+            this.AutoSize = true;
+            this.Location = new Point(25, 250);
+            this.Height = this.Width;
         }
         public async void mover( ) {
             while (true) {
@@ -29,6 +36,7 @@ namespace BotonEventos {
                 // Rebote izq
                 else if (this.Location.X < 5) {
                     this.velocidadx = 4;
+                    this.Lienzo.Controls.Clear();
                 }
                 // Rebote parte superior
                 else if (this.Location.Y < 10) {
@@ -102,7 +110,7 @@ namespace BotonEventos {
         public Control ElemMovible {
             get; protected set;
         }
-        public ElemMov( Form Lienzo, int indice ) {
+        public ElemMov( Form Lienzo ) {
             this.ElemMovible = new Control();
             this.Lienzo = Lienzo;
         }
@@ -128,7 +136,7 @@ namespace BotonEventos {
         public new PictureBox ElemMovible {
             get; private set;
         }
-        public Carita( Form Lienzo, int indice ) : base(Lienzo, indice) {
+        public Carita( Form Lienzo, int indice ) : base(Lienzo) {
             this.ElemMovible = new PictureBox() {
                 SizeMode = PictureBoxSizeMode.Zoom,
                 Size = new Size(50, 50)
@@ -144,7 +152,7 @@ namespace BotonEventos {
         private new readonly int[,] vel = new int[,] { { -5, 6 }, { -6, -4 }, { 4, -5 }, { 2, 6 }, { -7, 6 } };
         private new readonly int[,] pos = new int[,] { { 25, 30 }, { 100, 31 }, { 52, 120 }, { 125, 100 }, { 200, 350 } };
         private readonly int[,] colores = new int[,] { { 128, 0, 0 }, { 128, 128, 128 }, { 0, 0, 128 }, { 128, 0, 128 }, { 128, 128, 0 } };
-        public BotonSenc( Form Lienzo, int indice ) : base(Lienzo, indice) {
+        public BotonSenc( Form Lienzo, int indice ) : base(Lienzo) {
             this.ElemMovible = new Button();
             this.ElemMovible.Location = new Point(this.pos[ indice, 0 ], this.pos[ indice, 1 ]);
             this.velocidadx = this.vel[ indice, 0 ];
