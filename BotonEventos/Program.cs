@@ -6,7 +6,7 @@ namespace BotonEventos {
         static void Main() {
             Application.Run(new Lienzo() {
                 Size = new Size(500, 500),
-                BackColor = Color.Coral,
+                BackColor = Color.Gray,
                 StartPosition = FormStartPosition.CenterScreen,
                 Text = "Mojica Vidal Jonathan Jafet - 19211688"
             });
