@@ -6,8 +6,10 @@ using System.Collections.Generic;
 
 namespace BotonEventos {
     class BotonMov : Button {
+        // Variables locales para definir la velocidad
         private int velocidadx;
         private int velocidady;
+        // Listas para controlar los eventos que pasarán
         readonly private List<Control> nombres = new List<Control>();
         readonly private List<Control> botones = new List<Control>(5);
         readonly private List<Control> caritas = new List<Control>(3);
@@ -31,30 +33,32 @@ namespace BotonEventos {
                 // Rebote derecha
                 if (this.Location.X > this.Lienzo.Width - 10 - this.Width) {
                     this.velocidadx = -4;
-                    pintarBotones();
+                    await pintarBotones();
                 }
                 // Rebote izq
                 else if (this.Location.X < 5) {
                     this.velocidadx = 4;
-                    this.Lienzo.Controls.Clear();
+                    await quitarCosas(this.caritas, Color.Gray);
+                    await quitarCosas(this.nombres, Color.Gray);
+                    await quitarCosas(this.botones, Color.Gray);
                 }
                 // Rebote parte superior
                 else if (this.Location.Y < 10) {
                     this.velocidady = 4;
-                    pintarCaritas();
+                    await pintarCaritas();
                 }
                 // Rebote parte inferior
                 else if (this.Location.Y > this.Lienzo.Height - 35 - this.Height) {
                     this.velocidady = -4;
-                    pintarNombres();
+                    await pintarNombres();
                 }
                 // Toca equina superior derecha
                 if (this.Location.Y < 10 && this.Location.X > this.Lienzo.Width - 30 - this.Width) {
-                    quitarCosas(this.caritas, Color.Yellow);
+                    await quitarCosas(this.caritas, Color.Yellow);
                 }
                 // Toca esquina inferior derecha
                 if (this.Location.Y > this.Lienzo.Height - 90 - this.Height && this.Location.X > this.Lienzo.Width - 20 - this.Width) {
-                    quitarCosas(this.nombres, Color.Blue);
+                    await quitarCosas(this.nombres, Color.Blue);
                 }
                 // Movimiento
                 this.Left += this.velocidadx;
@@ -64,21 +68,23 @@ namespace BotonEventos {
                 await Task.Delay(20);
             }
         }
-        private void quitarCosas( List<Control> lista, Color fondo ) {
+        private async Task quitarCosas( List<Control> lista, Color fondo ) {
             for (int i = 0; i < lista.Count; i++)
                 this.Lienzo.Controls.Remove(lista[ i ]);
             lista.Clear();
             this.Lienzo.BackColor = fondo;
+            await Task.Delay(1);
         }
-        private void pintarCaritas( ) {
-            quitarCosas(this.caritas, Color.Yellow);
+        private async Task pintarCaritas( ) {
+            await quitarCosas(this.caritas, Color.Yellow);
             for (int i = 0; i < 3; i++) {
                 this.caritas.Add(new Carita(this.Lienzo, i).ElemMovible);
                 this.Lienzo.Controls.Add(this.caritas[ i ]);
             }
+            await Task.Delay(1);
         }
-        private void pintarNombres( ) {
-            quitarCosas(this.nombres, Color.Blue);
+        private async Task pintarNombres( ) {
+            await quitarCosas(this.nombres, Color.Blue);
             // 150 H & 20 W
             int maxW = this.Lienzo.Width / 150, maxH = ( this.Lienzo.Height - 40 ) / 20;
             for (int i = 0; i < maxH; i++)
@@ -90,13 +96,15 @@ namespace BotonEventos {
                     });
                     this.Lienzo.Controls.Add(this.nombres[ this.nombres.Count - 1 ]);
                 }
+            await Task.Delay(1);
         }
-        private void pintarBotones( ) {
-            quitarCosas(this.botones, Color.Orange);
+        private async Task pintarBotones( ) {
+            await quitarCosas(this.botones, Color.Orange);
             for (int i = 0; i < 5; i++) {
                 this.botones.Add(new BotonSenc(this.Lienzo, i).ElemMovible);
                 this.Lienzo.Controls.Add(this.botones[ i ]);
             }
+            await Task.Delay(1);
         }
     }
     class ElemMov {
