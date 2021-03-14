@@ -20,33 +20,36 @@ namespace BotonEventos {
         }
         public async void mover() {
             while (true) {
-                if (this.Right > this.Lienzo.Width - 15)
+                // Rebote derecha
+                if (this.Location.X > this.Lienzo.Width - 10 - this.Width)
                     this.velocidadx = -4;
                 // Rebote izq
-                else if (this.Left < 0) {
+                else if (this.Location.X < 5) {
                     this.velocidadx = 4;
                 }
                 // Rebote parte superior
-                else if (this.Top < 0) {
+                else if (this.Location.Y < 10) {
                     this.velocidady = 4;
                     pintarCaritas();
                 }
                 // Rebote parte inferior
-                else if (this.Bottom > Lienzo.Height - 35) {
+                else if (this.Location.Y > Lienzo.Height - 35 -this.Height) {
                     this.velocidady = -4;
-                    //pintarNombres();
+                    pintarNombres();
                 }
                 // Toca equina superior derecha
-                else if (this.Top < 10 && this.Right > Lienzo.Width - 30 - this.Width) {
+                if (this.Location.Y < 10 && this.Location.X > Lienzo.Width - 30 - this.Width) {
                     quitarCosas(caritas, Color.Yellow);
                 }
                 // Toca esquina inferior derecha
-                else if (this.Bottom > Lienzo.Height - 55 && this.Right > Lienzo.Width - 30 - this.Width) {
+                if (this.Location.Y > Lienzo.Height - 90 - this.Height && this.Location.X > Lienzo.Width - 20 - this.Width) {
                     quitarCosas(this.nombres, Color.Blue);
                 }
                 // Movimiento
                 this.Left += this.velocidadx;
                 this.Top += this.velocidady;
+                Lienzo.Text = this.Location.ToString() + Lienzo.Size;
+
                 await Task.Delay(20);
             }
         }
@@ -63,7 +66,7 @@ namespace BotonEventos {
                 this.Lienzo.Controls.Add(caritas[ i ]);
             }
         }
-        /*private void pintarNombres() {
+        private void pintarNombres() {
             quitarCosas(this.nombres, Color.Blue);
             // 150 H & 20 W
             int maxW = this.Lienzo.Width / 150, maxH = ( this.Lienzo.Height - 40 ) / 20;
@@ -76,7 +79,7 @@ namespace BotonEventos {
                     });
                     this.Lienzo.Controls.Add(this.nombres[ this.nombres.Count - 1 ]);
                 }
-        }*/
+        }
     }
     class ElemMov {
         protected int velocidadx;

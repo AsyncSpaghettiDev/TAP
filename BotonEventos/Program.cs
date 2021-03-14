@@ -21,7 +21,7 @@ namespace BotonEventos {
                 Text = "Me\nmuevo",
                 Font = new Font(familyName: "Comic Sans MS", 12),
                 AutoSize = true,
-                Location = new Point(new Random().Next(this.Width), new Random().Next(this.Height))
+                Location = new Point(25,250)
             };
             this.btn.Height = this.btn.Width;
             Controls.Add(this.btn);
