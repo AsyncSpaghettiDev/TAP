@@ -13,27 +13,37 @@ namespace PracticaU1 {
     }
     // Clase base de elementosMovibles
     abstract class Boton : Button {
-        protected int valor = 0;
+        protected int _valor;
+        public virtual int Valor {
+            get => this._valor;
+            set {
+                this._valor = value;
+            }
+        }
         public bool chocado = false;
         // Velocidades en x & y
-        protected int velocidadx = 0;
-        protected int velocidady = 0;
+        public int Velocidadx {
+            get; protected set;
+        }
+        public int Velocidady {
+            get; protected set;
+        }
         protected Estado _pos;
         public Estado Pos {
             get => this._pos;
             set {
                 switch (value) {
                     case Estado.abajo:
-                        this.velocidady = -Math.Abs(this.velocidady);
-                        break;
-                    case Estado.arriba:
-                        this.velocidady = Math.Abs(this.velocidady);
+                        this.Velocidady = -Math.Abs(this.Velocidady);
                         break;
                     case Estado.derecha:
-                        this.velocidadx = -Math.Abs(this.velocidadx);
+                        this.Velocidadx = -Math.Abs(this.Velocidadx);
+                        break;
+                    case Estado.arriba:
+                        this.Velocidady = Math.Abs(this.Velocidady);
                         break;
                     case Estado.izquierda:
-                        this.velocidadx = Math.Abs(this.velocidadx);
+                        this.Velocidadx = Math.Abs(this.Velocidadx);
                         break;
                 }
                 this._pos = value;
@@ -45,13 +55,21 @@ namespace PracticaU1 {
         }
         // Constructor para inicializar la form y el control base
         public Boton( Form Lienzo, Point ubicacion, int valor ) {
-            this.valor = valor;
+            this.Valor = valor;
             this.Lienzo = Lienzo;
             this.Location = ubicacion;
-            while (this.velocidadx == 0)
-                this.velocidadx = new Random().Next(-10, 10);
-            this.velocidady = -this.velocidadx;
-            this.AutoSize = true;
+            this.Velocidadx = 5;
+            this.Velocidady = -5;
+            this.Size = new Size(30,30);
+            mover();
+        }
+        public Boton( Form Lienzo, Point ubicacion, int valor, int vlx ) {
+            this.Valor = valor;
+            this.Lienzo = Lienzo;
+            this.Location = ubicacion;
+            this.Velocidadx = -vlx;
+            this.Velocidady = vlx;
+            this.Size = new Size(30, 30);
             mover();
         }
         // Metodo encargado de mover el control pasado por parametro
@@ -59,8 +77,8 @@ namespace PracticaU1 {
         public async void mover( ) {
             while (true) {
                 if (this.chocado) {
-                    this.velocidadx = -this.velocidadx;
-                    this.velocidady = -this.velocidady;
+                    this.Velocidadx = -this.Velocidadx;
+                    this.Velocidady = -this.Velocidady;
                     this.chocado = false;
                 }
                 // Rebote a la derecha
@@ -76,29 +94,44 @@ namespace PracticaU1 {
                 if (this.Bottom >= this.Lienzo.Height - 35)
                     this.Pos = Estado.abajo;
                 // Actualizacion de movimiento
-                this.Location = new Point(this.Location.X + this.velocidadx, this.Location.Y + this.velocidady);
-                await Task.Delay(50);
+                this.Location = new Point(this.Location.X + this.Velocidadx, this.Location.Y + this.Velocidady);
+                await Task.Delay(70);
                 // Se coloca al frente el control añadido
                 BringToFront();
             }
         }
-        public virtual void colision( Boton choque ) {
+        public virtual int colision( Boton choque ) {
             if (this.Location.X <= choque.Location.X + choque.Width && this.Location.X >= choque.Location.X - choque.Width &&
                 this.Location.Y >= choque.Location.Y - choque.Height && this.Location.Y <= choque.Location.Y + choque.Height) {
                 this.chocado = true;
                 choque.chocado = true;
-                Console.WriteLine("choque");
+                this.Location = new Point(this.Location.X - 10, this.Location.Y - 10);
+                choque.Location = new Point(choque.Location.X + 10, choque.Location.Y + 10);
+                if (this is Impar && choque is Impar)
+                    return 1;
+                if (( this is Impar && choque is Par ) || ( this is Par && choque is Impar ))
+                    return 2;
             }
+            return 0;
         }
     }
     class Par : Boton {
-        public Par( Form Tablero, Point ubicacion, int valor ) : base(Tablero, ubicacion, valor) {
-            this.Text = "Par: " + valor;
+        public override int Valor {
+            set {
+                this.Text = value.ToString();
+                this._valor = value;
+            }
         }
+        public Par( Form Tablero, Point ubicacion, int valor, int vel ) : base(Tablero, ubicacion, valor, vel) { }
+        public Par( Form Tablero, Point ubicacion, int valor ) : base(Tablero, ubicacion, valor) { }
     }
     class Impar : Boton {
-        public Impar( Form Tablero, Point ubicacion, int valor ) : base(Tablero, ubicacion, valor) {
-            this.Text = "Impar: " + valor;
+        public override int Valor {
+            set {
+                this.Text = value.ToString();
+                this._valor = value;
+            }
         }
+        public Impar( Form Tablero, Point ubicacion, int valor ) : base(Tablero, ubicacion, valor) { }
     }
 }
