@@ -13,6 +13,7 @@ namespace PracticaU1 {
     }
     // Clase base de elementosMovibles
     abstract class Boton : Button {
+        protected int valor = 0;
         public bool chocado = false;
         // Velocidades en x & y
         protected int velocidadx = 0;
@@ -43,7 +44,8 @@ namespace PracticaU1 {
             get; private set;
         }
         // Constructor para inicializar la form y el control base
-        public Boton( Form Lienzo, Point ubicacion ) {
+        public Boton( Form Lienzo, Point ubicacion, int valor ) {
+            this.valor = valor;
             this.Lienzo = Lienzo;
             this.Location = ubicacion;
             while (this.velocidadx == 0)
@@ -78,7 +80,6 @@ namespace PracticaU1 {
                 await Task.Delay(50);
                 // Se coloca al frente el control añadido
                 BringToFront();
-                this.Text = this.Location.ToString();
             }
         }
         public virtual void colision( Boton choque ) {
@@ -90,13 +91,13 @@ namespace PracticaU1 {
         }
     }
     class Par : Boton {
-        public Par( Form Tablero, Point ubicacion ) : base(Tablero, ubicacion) {
-            this.Text = "Par";
+        public Par( Form Tablero, Point ubicacion, int valor ) : base(Tablero, ubicacion, valor) {
+            this.Text = "Par: " + valor;
         }
     }
     class Impar : Boton {
-        public Impar( Form Tablero, Point ubicacion ) : base(Tablero, ubicacion) {
-            this.Text = "Impar";
+        public Impar( Form Tablero, Point ubicacion, int valor ) : base(Tablero, ubicacion, valor) {
+            this.Text = "Impar: " + valor;
         }
     }
 }
