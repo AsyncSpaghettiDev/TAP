@@ -42,8 +42,9 @@ namespace PracticaU1 {
                         if (i == j)
                             continue;
                         ( this.Controls[ i ] as Boton ).colision(this.Controls[ j ] as Boton);
+                        break;
                     }
-                await Task.Delay(40);
+                await Task.Delay(25);
             }
         }
     }

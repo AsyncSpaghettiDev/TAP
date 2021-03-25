@@ -87,6 +87,7 @@ namespace PracticaU1 {
                 this.Location.Y >= choque.Location.Y - choque.Height && this.Location.Y <= choque.Location.Y + choque.Height) {
                 this.chocado = true;
                 choque.chocado = true;
+                Console.WriteLine("choque");
             }
         }
     }
