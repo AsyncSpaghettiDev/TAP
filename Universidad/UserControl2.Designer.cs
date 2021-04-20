@@ -322,7 +322,7 @@ namespace Universidad {
             this.bunifuTextBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox8.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBox8.DefaultText = "";
+            this.bunifuTextBox8.DefaultText = "1";
             this.bunifuTextBox8.FillColor = System.Drawing.Color.White;
             this.bunifuTextBox8.HideSelection = true;
             this.bunifuTextBox8.IconLeft = null;
@@ -330,7 +330,8 @@ namespace Universidad {
             this.bunifuTextBox8.IconPadding = 10;
             this.bunifuTextBox8.IconRight = null;
             this.bunifuTextBox8.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox8.Lines = new string[0];
+            this.bunifuTextBox8.Lines = new string[] {
+        "1"};
             this.bunifuTextBox8.Location = new System.Drawing.Point(319, 418);
             this.bunifuTextBox8.MaxLength = 32767;
             this.bunifuTextBox8.MinimumSize = new System.Drawing.Size(1, 1);
@@ -365,7 +366,7 @@ namespace Universidad {
             this.bunifuTextBox8.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bunifuTextBox8.SelectedText = "";
             this.bunifuTextBox8.SelectionLength = 0;
-            this.bunifuTextBox8.SelectionStart = 0;
+            this.bunifuTextBox8.SelectionStart = 1;
             this.bunifuTextBox8.ShortcutsEnabled = true;
             this.bunifuTextBox8.Size = new System.Drawing.Size(260, 37);
             this.bunifuTextBox8.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
@@ -618,7 +619,7 @@ namespace Universidad {
             this.bunifuTextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox4.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBox4.DefaultText = "";
+            this.bunifuTextBox4.DefaultText = "664";
             this.bunifuTextBox4.FillColor = System.Drawing.Color.White;
             this.bunifuTextBox4.HideSelection = true;
             this.bunifuTextBox4.IconLeft = null;
@@ -626,7 +627,8 @@ namespace Universidad {
             this.bunifuTextBox4.IconPadding = 10;
             this.bunifuTextBox4.IconRight = null;
             this.bunifuTextBox4.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox4.Lines = new string[0];
+            this.bunifuTextBox4.Lines = new string[] {
+        "664"};
             this.bunifuTextBox4.Location = new System.Drawing.Point(319, 214);
             this.bunifuTextBox4.MaxLength = 32767;
             this.bunifuTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
@@ -661,7 +663,7 @@ namespace Universidad {
             this.bunifuTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bunifuTextBox4.SelectedText = "";
             this.bunifuTextBox4.SelectionLength = 0;
-            this.bunifuTextBox4.SelectionStart = 0;
+            this.bunifuTextBox4.SelectionStart = 3;
             this.bunifuTextBox4.ShortcutsEnabled = true;
             this.bunifuTextBox4.Size = new System.Drawing.Size(260, 37);
             this.bunifuTextBox4.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
