@@ -26,26 +26,17 @@ namespace TallerCarroceria {
         private void InitializeComponent( ) {
             this.components = new System.ComponentModel.Container();
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation2 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation3 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation4 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
+            this.bunifuTransition2 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
+            this.bunifuTransition3 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
+            this.bunifuTransition4 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.herramientas1 = new TallerCarroceria.Herramientas();
-            this.catalogo1 = new TallerCarroceria.Catalogo();
-            this.especialidades1 = new TallerCarroceria.Especialidades();
-            this.trabajadores1 = new TallerCarroceria.Trabajadores();
-            this.clientes1 = new TallerCarroceria.Clientes();
-            this.servicio1 = new TallerCarroceria.Servicio();
-            this.home1 = new TallerCarroceria.Home();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -60,14 +51,18 @@ namespace TallerCarroceria {
             this.bunifuTileButton3 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTransition2 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.bunifuTransition3 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.bunifuTransition4 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.herramientas1 = new TallerCarroceria.Herramientas();
+            this.catalogo1 = new TallerCarroceria.Catalogo();
+            this.especialidades1 = new TallerCarroceria.Especialidades();
+            this.trabajadores1 = new TallerCarroceria.Trabajadores();
+            this.clientes1 = new TallerCarroceria.Clientes();
+            this.servicio1 = new TallerCarroceria.Servicio();
+            this.home1 = new TallerCarroceria.Home();
             this.bunifuPanel4.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -77,6 +72,11 @@ namespace TallerCarroceria {
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -90,97 +90,6 @@ namespace TallerCarroceria {
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.bunifuPanel1;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(44)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 0;
-            this.bunifuPanel1.BorderThickness = 0;
-            this.bunifuPanel1.Controls.Add(this.pictureBox4);
-            this.bunifuPanel1.Controls.Add(this.pictureBox3);
-            this.bunifuPanel1.Controls.Add(this.pictureBox2);
-            this.bunifuPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuTransition4.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = false;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1200, 60);
-            this.bunifuPanel1.TabIndex = 0;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition3.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1080, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition3.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition3.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1140, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition3.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(70, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.homeScreen);
             // 
             // bunifuTransition1
             // 
@@ -202,6 +111,69 @@ namespace TallerCarroceria {
             animation2.TimeCoeff = 0F;
             animation2.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation2;
+            // 
+            // bunifuTransition2
+            // 
+            this.bunifuTransition2.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.bunifuTransition2.Cursor = null;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation3;
+            // 
+            // bunifuTransition3
+            // 
+            this.bunifuTransition3.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransition3.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.bunifuTransition3.DefaultAnimation = animation1;
+            // 
+            // bunifuTransition4
+            // 
+            this.bunifuTransition4.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent;
+            this.bunifuTransition4.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 1F;
+            this.bunifuTransition4.DefaultAnimation = animation4;
             // 
             // bunifuPanel4
             // 
@@ -227,90 +199,6 @@ namespace TallerCarroceria {
             this.bunifuPanel4.ShowBorders = true;
             this.bunifuPanel4.Size = new System.Drawing.Size(1050, 610);
             this.bunifuPanel4.TabIndex = 3;
-            // 
-            // herramientas1
-            // 
-            this.herramientas1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
-            this.bunifuTransition3.SetDecoration(this.herramientas1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.herramientas1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.herramientas1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.herramientas1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.herramientas1.Location = new System.Drawing.Point(0, 0);
-            this.herramientas1.Name = "herramientas1";
-            this.herramientas1.Size = new System.Drawing.Size(1050, 610);
-            this.herramientas1.TabIndex = 6;
-            // 
-            // catalogo1
-            // 
-            this.catalogo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
-            this.bunifuTransition3.SetDecoration(this.catalogo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.catalogo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.catalogo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.catalogo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.catalogo1.Location = new System.Drawing.Point(0, 0);
-            this.catalogo1.Name = "catalogo1";
-            this.catalogo1.Size = new System.Drawing.Size(1050, 610);
-            this.catalogo1.TabIndex = 5;
-            // 
-            // especialidades1
-            // 
-            this.especialidades1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
-            this.bunifuTransition3.SetDecoration(this.especialidades1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.especialidades1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.especialidades1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.especialidades1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.especialidades1.Location = new System.Drawing.Point(0, 0);
-            this.especialidades1.Name = "especialidades1";
-            this.especialidades1.Size = new System.Drawing.Size(1050, 610);
-            this.especialidades1.TabIndex = 4;
-            // 
-            // trabajadores1
-            // 
-            this.trabajadores1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
-            this.bunifuTransition3.SetDecoration(this.trabajadores1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.trabajadores1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.trabajadores1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.trabajadores1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.trabajadores1.Location = new System.Drawing.Point(0, 0);
-            this.trabajadores1.Name = "trabajadores1";
-            this.trabajadores1.Size = new System.Drawing.Size(1050, 610);
-            this.trabajadores1.TabIndex = 3;
-            // 
-            // clientes1
-            // 
-            this.clientes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
-            this.bunifuTransition3.SetDecoration(this.clientes1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.clientes1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.clientes1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.clientes1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.clientes1.Location = new System.Drawing.Point(0, 0);
-            this.clientes1.Name = "clientes1";
-            this.clientes1.Size = new System.Drawing.Size(1050, 610);
-            this.clientes1.TabIndex = 2;
-            // 
-            // servicio1
-            // 
-            this.servicio1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
-            this.bunifuTransition3.SetDecoration(this.servicio1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.servicio1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.servicio1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.servicio1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.servicio1.Location = new System.Drawing.Point(0, 0);
-            this.servicio1.Name = "servicio1";
-            this.servicio1.Size = new System.Drawing.Size(1050, 610);
-            this.servicio1.TabIndex = 1;
-            // 
-            // home1
-            // 
-            this.home1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition3.SetDecoration(this.home1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.home1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.home1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.home1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.home1.Location = new System.Drawing.Point(2, 125);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(1050, 310);
-            this.home1.TabIndex = 0;
             // 
             // bunifuPanel3
             // 
@@ -618,68 +506,180 @@ namespace TallerCarroceria {
             this.bunifuTileButton1.TabIndex = 0;
             this.bunifuTileButton1.Click += new System.EventHandler(this.serviceScreen);
             // 
-            // bunifuTransition2
+            // bunifuPanel1
             // 
-            this.bunifuTransition2.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.bunifuTransition2.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation3;
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(44)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 0;
+            this.bunifuPanel1.BorderThickness = 0;
+            this.bunifuPanel1.Controls.Add(this.pictureBox4);
+            this.bunifuPanel1.Controls.Add(this.pictureBox3);
+            this.bunifuPanel1.Controls.Add(this.pictureBox2);
+            this.bunifuPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuTransition4.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = false;
+            this.bunifuPanel1.Size = new System.Drawing.Size(1200, 60);
+            this.bunifuPanel1.TabIndex = 0;
             // 
-            // bunifuTransition3
+            // pictureBox4
             // 
-            this.bunifuTransition3.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
-            this.bunifuTransition3.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(50);
-            animation1.RotateCoeff = 0.3F;
-            animation1.RotateLimit = 0.2F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition3.DefaultAnimation = animation1;
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition3.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1080, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // bunifuTransition4
+            // pictureBox3
             // 
-            this.bunifuTransition4.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
-            this.bunifuTransition4.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(50);
-            animation4.RotateCoeff = 0.3F;
-            animation4.RotateLimit = 0.2F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.bunifuTransition4.DefaultAnimation = animation4;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition3.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(10, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition3.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1140, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition3.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(70, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.homeScreen);
+            // 
+            // herramientas1
+            // 
+            this.herramientas1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
+            this.bunifuTransition3.SetDecoration(this.herramientas1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.herramientas1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.herramientas1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.herramientas1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.herramientas1.Location = new System.Drawing.Point(0, 0);
+            this.herramientas1.Name = "herramientas1";
+            this.herramientas1.Size = new System.Drawing.Size(1050, 610);
+            this.herramientas1.TabIndex = 6;
+            // 
+            // catalogo1
+            // 
+            this.catalogo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
+            this.bunifuTransition3.SetDecoration(this.catalogo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.catalogo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.catalogo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.catalogo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.catalogo1.Location = new System.Drawing.Point(0, 0);
+            this.catalogo1.Name = "catalogo1";
+            this.catalogo1.Size = new System.Drawing.Size(1050, 610);
+            this.catalogo1.TabIndex = 5;
+            // 
+            // especialidades1
+            // 
+            this.especialidades1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
+            this.bunifuTransition3.SetDecoration(this.especialidades1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.especialidades1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.especialidades1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.especialidades1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.especialidades1.Location = new System.Drawing.Point(0, 0);
+            this.especialidades1.Name = "especialidades1";
+            this.especialidades1.Size = new System.Drawing.Size(1050, 610);
+            this.especialidades1.TabIndex = 4;
+            // 
+            // trabajadores1
+            // 
+            this.trabajadores1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
+            this.bunifuTransition3.SetDecoration(this.trabajadores1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.trabajadores1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.trabajadores1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.trabajadores1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.trabajadores1.Location = new System.Drawing.Point(0, 0);
+            this.trabajadores1.Name = "trabajadores1";
+            this.trabajadores1.Size = new System.Drawing.Size(1050, 610);
+            this.trabajadores1.TabIndex = 3;
+            // 
+            // clientes1
+            // 
+            this.clientes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
+            this.bunifuTransition3.SetDecoration(this.clientes1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.clientes1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.clientes1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.clientes1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.clientes1.Location = new System.Drawing.Point(0, 0);
+            this.clientes1.Name = "clientes1";
+            this.clientes1.Size = new System.Drawing.Size(1050, 610);
+            this.clientes1.TabIndex = 2;
+            // 
+            // servicio1
+            // 
+            this.servicio1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(211)))), ((int)(((byte)(186)))));
+            this.bunifuTransition3.SetDecoration(this.servicio1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.servicio1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.servicio1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.servicio1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.servicio1.Location = new System.Drawing.Point(0, 0);
+            this.servicio1.Name = "servicio1";
+            this.servicio1.Size = new System.Drawing.Size(1050, 610);
+            this.servicio1.TabIndex = 1;
+            // 
+            // home1
+            // 
+            this.home1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition3.SetDecoration(this.home1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.home1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.home1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.home1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.home1.Location = new System.Drawing.Point(2, 125);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(1050, 310);
+            this.home1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -701,11 +701,6 @@ namespace TallerCarroceria {
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Taller Carroceria";
             this.Load += new System.EventHandler(this.form1_Load);
-            this.bunifuPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPanel4.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -715,6 +710,11 @@ namespace TallerCarroceria {
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.bunifuPanel2.ResumeLayout(false);
+            this.bunifuPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

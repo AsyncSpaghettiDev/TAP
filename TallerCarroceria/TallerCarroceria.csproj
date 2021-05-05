@@ -78,12 +78,6 @@
     <Compile Include="Catalogo.Designer.cs">
       <DependentUpon>Catalogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Change.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Change.Designer.cs">
-      <DependentUpon>Change.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,9 +148,6 @@
     </Compile>
     <EmbeddedResource Include="Catalogo.resx">
       <DependentUpon>Catalogo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Change.resx">
-      <DependentUpon>Change.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>

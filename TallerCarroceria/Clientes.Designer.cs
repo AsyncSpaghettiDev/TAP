@@ -59,7 +59,7 @@ namespace TallerCarroceria {
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label1.Location = new System.Drawing.Point(155, 100);
+            this.label1.Location = new System.Drawing.Point(100, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace TallerCarroceria {
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 140);
+            this.comboBox1.Location = new System.Drawing.Point(100, 140);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 29);
             this.comboBox1.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace TallerCarroceria {
             "3",
             "4",
             "5"});
-            this.comboBox2.Location = new System.Drawing.Point(155, 240);
+            this.comboBox2.Location = new System.Drawing.Point(100, 240);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(160, 29);
             this.comboBox2.TabIndex = 7;
@@ -98,7 +98,7 @@ namespace TallerCarroceria {
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label2.Location = new System.Drawing.Point(155, 200);
+            this.label2.Location = new System.Drawing.Point(100, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(196, 25);
             this.label2.TabIndex = 9;
@@ -109,7 +109,7 @@ namespace TallerCarroceria {
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label3.Location = new System.Drawing.Point(155, 300);
+            this.label3.Location = new System.Drawing.Point(100, 300);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(186, 25);
             this.label3.TabIndex = 10;
@@ -120,7 +120,7 @@ namespace TallerCarroceria {
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label4.Location = new System.Drawing.Point(155, 400);
+            this.label4.Location = new System.Drawing.Point(100, 400);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 25);
             this.label4.TabIndex = 11;
@@ -149,7 +149,6 @@ namespace TallerCarroceria {
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuDataGridView1.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
@@ -181,7 +180,7 @@ namespace TallerCarroceria {
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(507, 206);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(478, 206);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.ReadOnly = true;
             this.bunifuDataGridView1.RowHeadersVisible = false;
@@ -218,7 +217,7 @@ namespace TallerCarroceria {
             this.bunifuTextBox2.IconRight = null;
             this.bunifuTextBox2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox2.Lines = new string[0];
-            this.bunifuTextBox2.Location = new System.Drawing.Point(155, 440);
+            this.bunifuTextBox2.Location = new System.Drawing.Point(100, 440);
             this.bunifuTextBox2.MaxLength = 32767;
             this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox2.Modified = false;
@@ -277,7 +276,7 @@ namespace TallerCarroceria {
             this.bunifuPanel5.Controls.Add(this.bunifuImageButton3);
             this.bunifuPanel5.Controls.Add(this.bunifuImageButton2);
             this.bunifuPanel5.Controls.Add(this.bunifuImageButton1);
-            this.bunifuPanel5.Location = new System.Drawing.Point(612, 110);
+            this.bunifuPanel5.Location = new System.Drawing.Point(583, 110);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
             this.bunifuPanel5.Size = new System.Drawing.Size(390, 90);
@@ -450,7 +449,7 @@ namespace TallerCarroceria {
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(155, 340);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(100, 340);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;

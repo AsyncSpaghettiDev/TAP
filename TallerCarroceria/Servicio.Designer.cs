@@ -61,7 +61,7 @@ namespace TallerCarroceria {
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label1.Location = new System.Drawing.Point(95, 80);
+            this.label1.Location = new System.Drawing.Point(55, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 25);
             this.label1.TabIndex = 0;
@@ -72,7 +72,7 @@ namespace TallerCarroceria {
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label2.Location = new System.Drawing.Point(95, 168);
+            this.label2.Location = new System.Drawing.Point(55, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 25);
             this.label2.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace TallerCarroceria {
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label3.Location = new System.Drawing.Point(95, 259);
+            this.label3.Location = new System.Drawing.Point(55, 259);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 25);
             this.label3.TabIndex = 4;
@@ -94,7 +94,7 @@ namespace TallerCarroceria {
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label4.Location = new System.Drawing.Point(95, 438);
+            this.label4.Location = new System.Drawing.Point(55, 438);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 25);
             this.label4.TabIndex = 5;
@@ -105,7 +105,7 @@ namespace TallerCarroceria {
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label5.Location = new System.Drawing.Point(569, 80);
+            this.label5.Location = new System.Drawing.Point(580, 80);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(196, 25);
             this.label5.TabIndex = 6;
@@ -116,7 +116,7 @@ namespace TallerCarroceria {
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label6.Location = new System.Drawing.Point(785, 80);
+            this.label6.Location = new System.Drawing.Point(803, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 25);
             this.label6.TabIndex = 7;
@@ -127,7 +127,7 @@ namespace TallerCarroceria {
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
-            this.label7.Location = new System.Drawing.Point(95, 350);
+            this.label7.Location = new System.Drawing.Point(55, 350);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(241, 25);
             this.label7.TabIndex = 8;
@@ -138,7 +138,7 @@ namespace TallerCarroceria {
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(95, 122);
+            this.comboBox1.Location = new System.Drawing.Point(55, 122);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(158, 29);
             this.comboBox1.TabIndex = 11;
@@ -149,7 +149,7 @@ namespace TallerCarroceria {
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(569, 115);
+            this.comboBox2.Location = new System.Drawing.Point(580, 115);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(200, 29);
             this.comboBox2.TabIndex = 12;
@@ -160,9 +160,9 @@ namespace TallerCarroceria {
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(785, 115);
+            this.comboBox3.Location = new System.Drawing.Point(803, 115);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 29);
+            this.comboBox3.Size = new System.Drawing.Size(167, 29);
             this.comboBox3.TabIndex = 13;
             // 
             // comboBox4
@@ -171,7 +171,7 @@ namespace TallerCarroceria {
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(95, 392);
+            this.comboBox4.Location = new System.Drawing.Point(55, 392);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(200, 29);
             this.comboBox4.TabIndex = 15;
@@ -230,13 +230,13 @@ namespace TallerCarroceria {
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(417, 286);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(353, 272);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.ReadOnly = true;
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(568, 231);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(661, 245);
             this.bunifuDataGridView1.TabIndex = 16;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             // 
@@ -252,7 +252,7 @@ namespace TallerCarroceria {
             this.bunifuPanel5.Controls.Add(this.bunifuImageButton3);
             this.bunifuPanel5.Controls.Add(this.bunifuImageButton2);
             this.bunifuPanel5.Controls.Add(this.bunifuImageButton1);
-            this.bunifuPanel5.Location = new System.Drawing.Point(583, 165);
+            this.bunifuPanel5.Location = new System.Drawing.Point(580, 165);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
             this.bunifuPanel5.Size = new System.Drawing.Size(390, 90);
@@ -416,7 +416,7 @@ namespace TallerCarroceria {
             this.bunifuDatePicker2.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker2.LeftTextMargin = 5;
-            this.bunifuDatePicker2.Location = new System.Drawing.Point(95, 301);
+            this.bunifuDatePicker2.Location = new System.Drawing.Point(55, 301);
             this.bunifuDatePicker2.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker2.Name = "bunifuDatePicker2";
             this.bunifuDatePicker2.Size = new System.Drawing.Size(260, 32);
@@ -441,7 +441,7 @@ namespace TallerCarroceria {
             this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
-            this.bunifuDatePicker1.Location = new System.Drawing.Point(95, 210);
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(55, 210);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(260, 32);
@@ -475,7 +475,7 @@ namespace TallerCarroceria {
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(95, 480);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(55, 480);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;
