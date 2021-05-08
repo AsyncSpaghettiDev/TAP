@@ -107,9 +107,9 @@ namespace TallerCarroceria {
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.label5.Location = new System.Drawing.Point(580, 80);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 25);
+            this.label5.Size = new System.Drawing.Size(170, 25);
             this.label5.TabIndex = 6;
-            this.label5.Text = "ID Trabajo a realizar";
+            this.label5.Text = "Trabajo a realizar";
             // 
             // label6
             // 
@@ -118,9 +118,9 @@ namespace TallerCarroceria {
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.label6.Location = new System.Drawing.Point(803, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 25);
+            this.label6.Size = new System.Drawing.Size(76, 25);
             this.label6.TabIndex = 7;
-            this.label6.Text = "ID Cliente";
+            this.label6.Text = "Cliente";
             // 
             // label7
             // 
@@ -129,9 +129,9 @@ namespace TallerCarroceria {
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(84)))));
             this.label7.Location = new System.Drawing.Point(55, 350);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(241, 25);
+            this.label7.Size = new System.Drawing.Size(215, 25);
             this.label7.TabIndex = 8;
-            this.label7.Text = "ID Trabajador encargado";
+            this.label7.Text = "Trabajador encargado";
             // 
             // comboBox1
             // 
@@ -153,6 +153,7 @@ namespace TallerCarroceria {
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(200, 29);
             this.comboBox2.TabIndex = 12;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.calcularPrecio);
             // 
             // comboBox3
             // 
@@ -164,6 +165,7 @@ namespace TallerCarroceria {
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(167, 29);
             this.comboBox3.TabIndex = 13;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.calcularPrecio);
             // 
             // comboBox4
             // 
@@ -292,6 +294,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton4.WaitOnLoad = false;
             this.bunifuImageButton4.Zoom = 25;
             this.bunifuImageButton4.ZoomSpeed = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.baja);
             // 
             // bunifuImageButton3
             // 
@@ -327,6 +330,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton3.WaitOnLoad = false;
             this.bunifuImageButton3.Zoom = 25;
             this.bunifuImageButton3.ZoomSpeed = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.actualizar);
             // 
             // bunifuImageButton2
             // 
@@ -362,6 +366,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton2.WaitOnLoad = false;
             this.bunifuImageButton2.Zoom = 25;
             this.bunifuImageButton2.ZoomSpeed = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.buscar);
             // 
             // bunifuImageButton1
             // 
@@ -397,6 +402,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton1.WaitOnLoad = false;
             this.bunifuImageButton1.Zoom = 25;
             this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.alta);
             // 
             // bunifuDatePicker2
             // 
@@ -417,6 +423,7 @@ namespace TallerCarroceria {
             this.bunifuDatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker2.LeftTextMargin = 5;
             this.bunifuDatePicker2.Location = new System.Drawing.Point(55, 301);
+            this.bunifuDatePicker2.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.bunifuDatePicker2.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker2.Name = "bunifuDatePicker2";
             this.bunifuDatePicker2.Size = new System.Drawing.Size(260, 32);
@@ -442,11 +449,13 @@ namespace TallerCarroceria {
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
             this.bunifuDatePicker1.Location = new System.Drawing.Point(55, 210);
+            this.bunifuDatePicker1.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(260, 32);
             this.bunifuDatePicker1.TabIndex = 9;
             this.bunifuDatePicker1.Value = new System.DateTime(2021, 5, 5, 0, 0, 0, 0);
+            this.bunifuDatePicker1.ValueChanged += new System.EventHandler(this.bunifuDatePicker1_ValueChanged);
             // 
             // bunifuTextBox1
             // 

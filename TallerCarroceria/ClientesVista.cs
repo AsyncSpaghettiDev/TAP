@@ -14,13 +14,12 @@ namespace TallerCarroceria {
             this.bunifuDataGridView1.Columns[ 1 ].Name = "Marca";
             this.bunifuDataGridView1.Columns[ 2 ].Name = "Modelo";
             this.bunifuDataGridView1.Columns[ 3 ].Name = "Año";
-            // Se cargan los datos en el dataGrid ya creado
-            cargarGrid();
         }
         // Se cargan los datos al dataGrid
-        private void cargarGrid( ) {
+        private void cargarGrid() {
             // Comando de consulta
-            SqlCommand consulta = new SqlCommand("SELECT * FROM Vehiculos", this.conexion);
+            SqlCommand consulta = new SqlCommand("SELECT * FROM Vehiculos WHERE idCliente=@ID", this.conexion);
+            consulta.Parameters.AddWithValue("ID", int.Parse(this.bunifuTextBox1.Text));
             // Se abre la conexion
             this.conexion.Open();
             // Se guardan los datos en un SqlDataReader
@@ -40,6 +39,42 @@ namespace TallerCarroceria {
             }
             // Se cierra la conexion
             this.conexion.Close();
+        }
+        // Evento que se ejecuta cuando se da click en el boton buscar
+        private void bunifuImageButton1_Click( object sender, System.EventArgs e ) {
+            // En caso que se encuentre un usuario con el id dado se cargan sus vehiculos en el datagrid
+            if (buscar()) 
+                cargarGrid();
+            // Se limpia el campo donde ingresas el id
+            this.bunifuTextBox1.Clear();
+        }
+        // Se buscan datos en la BD
+        private bool buscar( ) {
+            bool confirm = false;
+            // Se carga el id en el parametro usado en el comando SQL
+            if (string.IsNullOrEmpty(this.bunifuTextBox1.Text))
+                MessageBox.Show("¡Ingresa un ID!");
+            else {
+                // Se crea el comando para hacer una consulta solo con el id
+                SqlCommand consulta = new SqlCommand("SELECT * FROM Clientes WHERE idCliente=@ID", this.conexion);
+                consulta.Parameters.AddWithValue("ID", int.Parse(this.bunifuTextBox1.Text));
+                // Se abre la conexion
+                this.conexion.Open();
+                // Se guardan datos en un SqlDataReader
+                SqlDataReader data = consulta.ExecuteReader();
+                // Si hay datos que leer se leen
+                if (data.Read()) {
+                    // Se cargan los datos conseguidos en cada textBox
+                    this.bunifuTextBox2.Text = data[ 2 ].ToString();
+                    this.bunifuTextBox3.Text = data[ 1 ].ToString();
+                    this.bunifuTextBox4.Text = data[ 3 ].ToString();
+                    MessageBox.Show("Cliente encontrado");
+                    confirm = true;
+                }
+                // Se cierra la conexion
+                this.conexion.Close();
+            }
+            return confirm;
         }
     }
 }

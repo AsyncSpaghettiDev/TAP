@@ -55,7 +55,6 @@ namespace TallerCarroceria {
             this.bunifuTextBox4 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuImageButton5 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -234,8 +233,8 @@ namespace TallerCarroceria {
             this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox2.PasswordChar = '\0';
             this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox2.PlaceholderText = "Buscar por nombre";
-            this.bunifuTextBox2.ReadOnly = false;
+            this.bunifuTextBox2.PlaceholderText = "";
+            this.bunifuTextBox2.ReadOnly = true;
             this.bunifuTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bunifuTextBox2.SelectedText = "";
             this.bunifuTextBox2.SelectionLength = 0;
@@ -248,7 +247,7 @@ namespace TallerCarroceria {
             this.bunifuTextBox2.TextMarginBottom = 0;
             this.bunifuTextBox2.TextMarginLeft = 3;
             this.bunifuTextBox2.TextMarginTop = 0;
-            this.bunifuTextBox2.TextPlaceholder = "Buscar por nombre";
+            this.bunifuTextBox2.TextPlaceholder = "";
             this.bunifuTextBox2.UseSystemPasswordChar = false;
             this.bunifuTextBox2.WordWrap = true;
             // 
@@ -486,40 +485,6 @@ namespace TallerCarroceria {
             this.bunifuDataGridView1.TabIndex = 13;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             // 
-            // bunifuImageButton5
-            // 
-            this.bunifuImageButton5.ActiveImage = null;
-            this.bunifuImageButton5.AllowAnimations = true;
-            this.bunifuImageButton5.AllowBuffering = false;
-            this.bunifuImageButton5.AllowToggling = false;
-            this.bunifuImageButton5.AllowZooming = true;
-            this.bunifuImageButton5.AllowZoomingOnFocus = false;
-            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton5.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton5.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.ErrorImage")));
-            this.bunifuImageButton5.FadeWhenInactive = true;
-            this.bunifuImageButton5.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
-            this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.ImageLocation = null;
-            this.bunifuImageButton5.ImageMargin = 10;
-            this.bunifuImageButton5.ImageSize = new System.Drawing.Size(40, 40);
-            this.bunifuImageButton5.ImageZoomSize = new System.Drawing.Size(50, 50);
-            this.bunifuImageButton5.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.InitialImage")));
-            this.bunifuImageButton5.Location = new System.Drawing.Point(250, 207);
-            this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Rotation = 0;
-            this.bunifuImageButton5.ShowActiveImage = true;
-            this.bunifuImageButton5.ShowCursorChanges = true;
-            this.bunifuImageButton5.ShowImageBorders = true;
-            this.bunifuImageButton5.ShowSizeMarkers = false;
-            this.bunifuImageButton5.Size = new System.Drawing.Size(50, 50);
-            this.bunifuImageButton5.TabIndex = 14;
-            this.bunifuImageButton5.ToolTipText = "";
-            this.bunifuImageButton5.WaitOnLoad = false;
-            this.bunifuImageButton5.Zoom = 10;
-            this.bunifuImageButton5.ZoomSpeed = 10;
-            // 
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.ActiveImage = null;
@@ -553,6 +518,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton1.WaitOnLoad = false;
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // ClientesVista
             // 
@@ -560,7 +526,6 @@ namespace TallerCarroceria {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.bunifuImageButton1);
-            this.Controls.Add(this.bunifuImageButton5);
             this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.bunifuTextBox4);
@@ -593,7 +558,6 @@ namespace TallerCarroceria {
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox4;
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton5;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
     }
 }

@@ -51,6 +51,7 @@ namespace TallerCarroceria {
             this.vehiculos1 = new TallerCarroceria.Vehiculos();
             this.clientesVista1 = new TallerCarroceria.ClientesVista();
             this.home1 = new TallerCarroceria.Home();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuPanel4.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -361,7 +362,7 @@ namespace TallerCarroceria {
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -382,7 +383,7 @@ namespace TallerCarroceria {
             animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
             animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
             animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation4.Padding = new System.Windows.Forms.Padding(0);
             animation4.RotateCoeff = 0F;
             animation4.RotateLimit = 0F;
             animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
@@ -438,6 +439,13 @@ namespace TallerCarroceria {
             this.home1.Name = "home1";
             this.home1.Size = new System.Drawing.Size(1050, 310);
             this.home1.TabIndex = 0;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.bunifuPanel1;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // Form2
             // 
@@ -496,5 +504,6 @@ namespace TallerCarroceria {
         private Bunifu.UI.WinForms.BunifuTransition bunifuTransition4;
         private Bunifu.UI.WinForms.BunifuTransition bunifuTransition3;
         private Login login1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

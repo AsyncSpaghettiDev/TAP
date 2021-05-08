@@ -1,0 +1,96 @@
+-- Creacion de la base de datos llamada TallerCarroceria
+create database TallerCarroceria;
+-- Se establece que TallerCarroceria se usará
+use TallerCarroceria;
+
+drop table Clientes;
+drop table Vehiculos;
+drop table catalogoTrabajos;
+drop table Especialidades;
+drop table Trabajadores;
+drop table Servicio;
+drop table Herramientas;
+
+-- Creacion de la tabla llamada Clientes
+create table Clientes(
+-- Creacion de la llave primaria
+idCliente int primary key,
+membresiaCliente int,
+nombreCliente varchar(50),
+descuentoCliente float
+)
+
+-- Creacion de la tabla llamada Vehiculos
+create table Vehiculos(
+-- Creacion de la llave primaria
+matriculaVehiculo varchar(10) primary key,
+marcaVehiculo varchar(50),
+modeloVehiculo varchar(50),
+anioVehiculo int,
+idCliente int,
+-- Creacion de la llave foranea
+FOREIGN KEY (idCliente) REFERENCES Clientes(idCliente)
+)
+
+-- Creacion de la tabla llamada catalogoTrabajos
+create table catalogoTrabajos(
+-- Creacion de la llave primaria
+idTrabajo int primary key,
+nombreTrabajo varchar(50),
+precioTrabajo float
+)
+
+-- Creacion de la tabla llamada Especialidades
+create table Especialidades(
+-- Creacion de la llave primaria
+idEspecialidad int primary key,
+nombreEspecialidad varchar(50)
+)
+
+-- Creacion de la tabla llamada Especialidades
+create table Trabajadores(
+-- Creacion de la llave primaria
+idTrabajador int primary key,
+nombreTrabajador varchar(50),
+idEspecialidad int,
+-- Creacion de la llave foranea
+FOREIGN KEY (idEspecialidad) REFERENCES Especialidades(idEspecialidad)
+)
+
+-- Creacion de la tabla llamada Especialidades
+create table Servicio(
+-- Creacion de la llave primaria
+noServicio int primary key,
+fechaInicioServicio date,
+fechaFinalServicio date,
+precioServicio float,
+
+-- Creacion de la llave foranea
+idTrabajo int,
+FOREIGN KEY (idTrabajo) REFERENCES catalogoTrabajos(idTrabajo),
+
+-- Creacion de la llave foranea
+idCliente int,
+FOREIGN KEY (idCliente) REFERENCES Clientes(idCliente),
+
+-- Creacion de la llave foranea
+idTrabajador int,
+FOREIGN KEY (idTrabajador) REFERENCES Trabajadores(idTrabajador),
+)
+
+-- Creacion de la tabla llamada Herramientas (tabla independiente)
+create table Herramientas(
+-- Creacion de la llave primaria
+idHerramienta int primary key,
+fechaCompraHerramienta date,
+nombreHerramienta varchar(50),
+marcaHerramienta varchar(50)
+)
+
+SELECT * FROM Clientes
+SELECT * FROM Vehiculos
+SELECT * FROM Trabajadores
+SELECT * FROM Especialidades
+SELECT * FROM catalogoTrabajos
+SELECT * FROM Servicio
+SELECT * FROM Herramientas

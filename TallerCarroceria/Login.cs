@@ -15,8 +15,8 @@ namespace TallerCarroceria {
                 this.bunifuTextBox1.Clear();
                 this.bunifuTextBox2.Clear();
                 this.control.PantallaActual = ActiveScreen.Home;
-                this.control.Hide();
                 new Form1(this.control).Show();
+                this.control.Hide();
             }
             else
                 MessageBox.Show("Credenciales Inválidas");

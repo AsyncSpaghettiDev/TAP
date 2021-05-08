@@ -195,6 +195,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton4.WaitOnLoad = false;
             this.bunifuImageButton4.Zoom = 25;
             this.bunifuImageButton4.ZoomSpeed = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.baja);
             // 
             // bunifuImageButton3
             // 
@@ -230,6 +231,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton3.WaitOnLoad = false;
             this.bunifuImageButton3.Zoom = 25;
             this.bunifuImageButton3.ZoomSpeed = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.actualizar);
             // 
             // bunifuImageButton2
             // 
@@ -265,6 +267,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton2.WaitOnLoad = false;
             this.bunifuImageButton2.Zoom = 25;
             this.bunifuImageButton2.ZoomSpeed = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.buscar);
             // 
             // bunifuImageButton1
             // 
@@ -300,6 +303,7 @@ namespace TallerCarroceria {
             this.bunifuImageButton1.WaitOnLoad = false;
             this.bunifuImageButton1.Zoom = 25;
             this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.alta);
             // 
             // bunifuTextBox1
             // 
