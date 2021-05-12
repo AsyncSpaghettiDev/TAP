@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlesPersonalizados", "ControlesPersonalizados.csproj", "{000BEC78-5371-41D7-8698-417290C86FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaVisor", "..\PruebaVisor\PruebaVisor.csproj", "{A813683F-27D2-4A90-B555-EFA26D2D97B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{000BEC78-5371-41D7-8698-417290C86FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{000BEC78-5371-41D7-8698-417290C86FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{000BEC78-5371-41D7-8698-417290C86FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{000BEC78-5371-41D7-8698-417290C86FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A813683F-27D2-4A90-B555-EFA26D2D97B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A813683F-27D2-4A90-B555-EFA26D2D97B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A813683F-27D2-4A90-B555-EFA26D2D97B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A813683F-27D2-4A90-B555-EFA26D2D97B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E77CF6E-B8C7-402E-8111-551CAD13E99D}
+	EndGlobalSection
+EndGlobal
