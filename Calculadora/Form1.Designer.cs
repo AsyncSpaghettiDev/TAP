@@ -29,6 +29,7 @@ namespace Calculadora {
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,6 @@ namespace Calculadora {
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.bunifuPanel5.SuspendLayout();
@@ -113,6 +113,18 @@ namespace Calculadora {
             this.bunifuPanel1.ShowBorders = false;
             this.bunifuPanel1.Size = new System.Drawing.Size(450, 70);
             this.bunifuPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(25, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 29);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Calculadora";
             // 
             // pictureBox21
             // 
@@ -203,13 +215,13 @@ namespace Calculadora {
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Bahnschrift Light", 14F);
+            this.textBox2.Font = new System.Drawing.Font("Bahnschrift Light", 20F);
             this.textBox2.ForeColor = System.Drawing.Color.Gainsboro;
             this.textBox2.HideSelection = false;
             this.textBox2.Location = new System.Drawing.Point(3, 3);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(383, 23);
+            this.textBox2.Size = new System.Drawing.Size(383, 33);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "0";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -520,18 +532,6 @@ namespace Calculadora {
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 29);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Calculadora";
             // 
             // Form1
             // 

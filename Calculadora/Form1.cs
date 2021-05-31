@@ -97,6 +97,10 @@ namespace Calculadora {
                 switch (( sender as Control ).Tag) {
                     // Operacion de suma
                     case "Suma":
+                        if(this.operadorActivo == null)
+                            // Se asigna el nuevo operador
+                            this.operadorActivo = Operador.Suma;
+
                         // En caso que cambie el operador se calcula el valor de la operacion en curso
                         if (this.operadorActivo != Operador.Suma)
                             resultado();
@@ -113,6 +117,9 @@ namespace Calculadora {
                         break;
 
                     case "Resta":
+                        if (this.operadorActivo == null)
+                            // Se asigna el nuevo operador
+                            this.operadorActivo = Operador.Resta;
                         // En caso que cambie el operador se calcula el valor de la operacion en curso
                         if (this.operadorActivo != Operador.Resta)
                             resultado();
@@ -129,6 +136,9 @@ namespace Calculadora {
                         break;
 
                     case "Multiplicacion":
+                        if (this.operadorActivo == null)
+                            // Se asigna el nuevo operador
+                            this.operadorActivo = Operador.Multiplicacion;
                         // En caso que cambie el operador se calcula el valor de la operacion en curso
                         if (this.operadorActivo != Operador.Multiplicacion)
                             resultado();
@@ -144,6 +154,9 @@ namespace Calculadora {
                         break;
 
                     case "Division":
+                        if (this.operadorActivo == null)
+                            // Se asigna el nuevo operador
+                            this.operadorActivo = Operador.Division;
                         // En caso que cambie el operador se calcula el valor de la operacion en curso
                         if (this.operadorActivo != Operador.Division)
                             resultado();
@@ -220,7 +233,6 @@ namespace Calculadora {
                 // Tecla + presionada
                 case '+':
                     // Se asigna el operador de suma y tambien se asigna el tag de suma al control temporal
-                    this.operadorActivo = Operador.Suma;
                     temp.Tag = "Suma";
                     e.Handled = true;
                     // Se añade un + al textBox de arriba para que se sepa la operacion que se está haciendo
@@ -229,7 +241,6 @@ namespace Calculadora {
                 // Tecla - presionada
                 case '-':
                     // Se asigna el operador de resta y tambien se asigna el tag de resta al control temporal
-                    this.operadorActivo = Operador.Resta;
                     temp.Tag = "Resta";
                     e.Handled = true;
                     // Se añade un - al textBox de arriba para que se sepa la operacion que se está haciendo
@@ -238,7 +249,6 @@ namespace Calculadora {
                 // Tecla * presionada
                 case '*':
                     // Se asigna el operador de multiplicacion y tambien se asigna el tag de multiplicacion al control temporal
-                    this.operadorActivo = Operador.Multiplicacion;
                     temp.Tag = "Multiplicacion";
                     e.Handled = true;
                     // Se añade un * al textBox de arriba para que se sepa la operacion que se está haciendo
@@ -247,7 +257,6 @@ namespace Calculadora {
                 // Tecla / presionada
                 case '/':
                     // Se asigna el operador de division y tambien se asigna el tag de division al control temporal
-                    this.operadorActivo = Operador.Division;
                     temp.Tag = "Division";
                     e.Handled = true;
                     // Se añade un / al textBox de arriba para que se sepa la operacion que se está haciendo
