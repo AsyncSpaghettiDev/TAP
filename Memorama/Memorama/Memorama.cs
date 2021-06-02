@@ -113,12 +113,12 @@ namespace Memorama {
                     int Carta2 = int.Parse(cartasRevueltas[ int.Parse(cartaTemporal2.Name) ]);
 
                     if (Carta1 != Carta2) {
-                        cambiarJugador();
                         await Task.Delay(1000);
                         this.cartaTemporal1.Enabled = true;
                         this.cartaTemporal2.Enabled = true;
                         this.cartaTemporal1.Image = Properties.Resources.Girada;
                         this.cartaTemporal2.Image = Properties.Resources.Girada;
+                        cambiarJugador();
                     }
                     if (Carta1 == Carta2) {
                         this.jugadorActual.AgregarPunto(this.cartaTemporal1.Image);
