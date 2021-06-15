@@ -72,11 +72,9 @@ namespace ConexionMYSQL {
             // Mientras haya datos para leer se registrarán en el dataGrid
             while (data.Read()) {
                 List<string> dataS = new List<string>();
-                foreach (string dt in data) {
-                    dataS.Add(dt);
-                }
+                for (int i = 0; i < data.FieldCount; i++)
+                    dataS.Add(data[ i ].ToString());
                 datosSalida.Add(dataS);
-                dataS.Clear();
             }
             // Se cierra la conexion
             this.conexion.Close();
