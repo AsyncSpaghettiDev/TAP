@@ -40,12 +40,18 @@ namespace ConexionMYSQL {
             // Se cierra la conexion
             this.conexion.Close();
         }
-        // Se actualiza un registro con los datos recopilados
+        /// <summary>
+        /// Se actualiza un registro con los datos recopilados
+        /// </summary>
+        /// <param name="tabla"></param>
+        /// <param name="values"></param>
+        /// <param name="condicion"></param>
+        /// <returns></returns>
         public bool Actualizar( string tabla, string[] values, string condicion ) {
             bool correcto = true;
             string insert = string.Join(",", values);
             // Se crea el comando para actualizar los datos
-            MySqlCommand actualizar = new MySqlCommand($"UPDATE {tabla} SET {insert} WHERE {condicion}'", this.conexion);
+            MySqlCommand actualizar = new MySqlCommand($"UPDATE {tabla} SET {insert} WHERE {condicion}", this.conexion);
             // Se abre la conexion
             this.conexion.Open();
             // En caso de haber algun problema al ejecutar el editar se notifica al usuario
